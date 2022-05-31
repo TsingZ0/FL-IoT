@@ -70,6 +70,7 @@ class FedPrune(Server):
         self.save_results()
         self.save_global_model()
 
+    # By-unit aggregation
     def add_parameters(self, w, client_model):
         for server_param, client_param, m in zip(self.global_model.parameters(), client_model.parameters(), self.mask):
             server_param.data += client_param.data.clone() * w * (m!=0) / m * self.join_clients
