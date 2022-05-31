@@ -9,7 +9,7 @@ from utils.HAR_utils import *
 random.seed(1)
 np.random.seed(1)
 data_path = "pamap/"
-dir_path = "pamap-256/"
+dir_path = "pamap/"
 
 sample_window = 256 # 2.56s
 # sample_window = 128 # 1.28s
@@ -72,7 +72,7 @@ def load_data_pamap(data_folder):
         data = []
         for fn in fns:
             i_data = np.loadtxt(s_folder+fn, dtype=np.float32)
-            print(fn, i_data.shape)
+            # print(fn, i_data.shape)
             i_data = np.concatenate((i_data[:, :2], 
                                     i_data[:, 4:7], i_data[:, 10:16], 
                                     i_data[:, 21:24], i_data[:, 27:33], 
