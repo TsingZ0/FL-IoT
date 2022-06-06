@@ -1,7 +1,6 @@
 import numpy as np
 import os
 import random
-from utils.dataset_utils import *
 from utils.HAR_utils import *
 
 
