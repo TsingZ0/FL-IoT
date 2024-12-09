@@ -1,5 +1,5 @@
 # FL-IoT
-This is a platform containing the datasets and federated learning algorithms in IoT environments. Except for the datasets and algorithms, the features of this platform are the same as my another federated learning platform [PFL-Non-IID](https://github.com/TsingZ0/PFL-Non-IID). 
+This platform contains the datasets and federated learning algorithms in IoT environments. Except for the datasets and algorithms, the features of this platform are the same as [PFLlib](https://github.com/TsingZ0/PFLlib). 
 
 
 ## Algorithms (updating)
@@ -16,7 +16,7 @@ This is a platform containing the datasets and federated learning algorithms in 
 ## Datasets (updating)
 Two public datasets are used: [HAR (Human Activity Recognition Using Smartphones Data Set)](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones) and [PAMAP2 (Physical Activity Monitoring Data Set)](http://archive.ics.uci.edu/ml/datasets/pamap2+physical+activity+monitoring). Both of them are collected using sensors in real-world settings, so the data naturally belongs to each subject (i.e. client). For the detailed descriptions of these two datasets, please visit the given URLs. HAR has been pre-processed before download, but PAMAP2 just contains raw data. Thus, I pre-process PAMAP2 following the method for HAR. Specifically, (1) I only keep the IMU (Inertial Measurement Unit) data; (2) I sample the signals in fixed-width sliding windows of 2.56 sec and 50% overlap (256 readings/window). 
 
-Although these datasets can be used for various tasks, I only condister the classification task here. HAR contains 30 clients with data in 6 classes and PAMAP2 contains 9 clients with data in 12 classes. Note that I do not shuffle the data, as the data is collected over time. 
+Although these datasets can be used for various tasks, I only consider the classification task here. HAR contains 30 clients with data in 6 classes and PAMAP2 contains 9 clients with data in 12 classes. Note that I do not shuffle the data, as the data is collected over time. 
 
 In both HAR and PAMAP2, the data among clients are heterogeneous (feature shift). As shown in the following, PAMAP2 is more heterogeneous than HAR. 
 
